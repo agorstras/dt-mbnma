@@ -1,6 +1,6 @@
 # Model-Based Network Meta-Analysis (MB-NMA) Repository
 
-This repository contains code and data for two separate lines of work on model-based network meta-analysis:
+This repository contains code and data for two separate lines of work on model-based network meta-analysis with joint dose-response and time-course modeling:
 
 1. **Simulation Study** (`_sim_`): Simulation-based evaluation of MB-NMA methods
 2. **Obesity Case Study** (`_obesity_`): Application of MB-NMA to weight management treatment data
@@ -26,15 +26,15 @@ The repository is organized with a modular approach where each task follows a nu
 - `sim_stan/` - Stan model files for simulation analyses
   - `exp_NMA_emax_log.stan`, `exp_NMA_emax_log2.stan`, `exp_NMA_emax_log3.stan`
   - `exp_Time_NMA.stan`
-- `sim_results/` - Analysis outputs and results
 
 ### Obesity Case Study
 
-**Main Scripts** (prefix: `01_obesity_` through `05b_obesity_`)
-- `01_obesity_NMA.R` - Network meta-analysis (Figures 1A, 1B)
+**Main Scripts** (prefix: `00_obesity_` through `05b_obesity_`)
+- `01_obesity_setup.R` - Setup directory structure 
+- `01_obesity_NMA.R` - Network meta-analysis 
 - `02_obesity_Time_course_NMA.R` - Time course network meta-analysis
 - `03_obesity_Dose_Time_Course_NMA.R` - Combined dose-time course NMA
-- `04_obesity_Dose_Time_Course_NMA_RCOV.R` - Dose-time course NMA with random covariance structure
+- `04_obesity_Dose_Time_Course_NMA_RCOV.R` - Dose-time course NMA with covariance structure based on observed correlations
 - `05a_obesity_results_Time.R` - Time-specific results
 - `05b_obesity_results_Dose_Time.R` - Dose-time specific results
 
@@ -62,18 +62,18 @@ The repository is organized with a modular approach where each task follows a nu
 1. Conduct standard network meta-analysis on phase 3 data
 2. Extend to time course analysis
 3. Incorporate dose-response relationships
-4. Refine with random covariance structures
-5. Generate comprehensive results and figures
+4. Extend to cover observed correlations
+5. Generate results and figures
 
 ## Dependencies
 
 Key R packages required:
-- `multinma` - Network meta-analysis
 - `brms` - Bayesian regression models with Stan
 - `tidyverse` - Data manipulation and visualization
 - `tidybayes` - Bayesian analysis utilities
 - `MASS` - Multivariate normal distributions
 - `Matrix` - Sparse matrix operations
+- `multinma` - Network meta-analysis
 - `rstan` / `cmdstanr` - Stan interface
 
 ## Key Features
@@ -82,14 +82,12 @@ Key R packages required:
 - **Multivariate modeling**: Accounts for within-study correlations across time points
 - **Bayesian framework**: Uses Stan for flexible hierarchical modeling
 - **Simulation validation**: Extensive simulation study to evaluate method performance
-- **Real-world application**: Applied to obesity treatment trial network
+- **Real-world application**: Applied to weight management treatments trial network
 
 ## Notes
 
 - File paths in scripts should be updated to reflect your directory structure
-- Initial runs supporting the publication are already saved in the /results folders, such that it is possible to execute script 4 (sim), and 5a/5b (obesity) without rerunning analyses 
 - Parallel processing enabled where appropriate (`mc.cores`, `future.apply`)
-- Reproducible results in simulation scripts
 
 ## Contact
 
