@@ -30,7 +30,7 @@ The repository is organized with a modular approach where each task follows a nu
 ### Obesity Case Study
 
 **Main Scripts** (prefix: `00_obesity_` through `05b_obesity_`)
-- `01_obesity_setup.R` - Setup directory structure 
+- `00_obesity_setup.R` - Setup directory structure 
 - `01_obesity_NMA.R` - Network meta-analysis 
 - `02_obesity_Time_course_NMA.R` - Time course network meta-analysis
 - `03_obesity_Dose_Time_Course_NMA.R` - Combined dose-time course NMA
