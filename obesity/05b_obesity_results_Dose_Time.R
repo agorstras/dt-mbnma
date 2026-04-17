@@ -9,13 +9,13 @@
 library(gridExtra)
 library(ggplot2)
 library(multinma)
-#
-rm(list = ls()) # clear memory
-options(mc.cores = parallel::detectCores()) # setup for parallel 
 
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
-#
+rm(list = ls()) # clear memory
+options(mc.cores = parallel::detectCores()) # setup for parallel
+
+loc = "obesity"
+
+set.seed(1234)
 # utility functions
 ################################################################################
 Map.trt = function(object, pars, dname, d){

@@ -9,8 +9,7 @@ library(ggplot2)
 library(tidyverse)
 
 # set location
-scer = F
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+loc = "sim"
 
 ################################################################################
 getParm = function(run, model, scenario, path){

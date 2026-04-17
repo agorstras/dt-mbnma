@@ -5,9 +5,8 @@
 #
 rm(list = ls())
 
-#set location 
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+#set location
+loc = "obesity"
 
 #
 dir.create(paste0(loc, "/obesity_results/NMA"),showWarnings = FALSE,recursive = TRUE)

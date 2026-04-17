@@ -14,10 +14,9 @@ library(Matrix)
 library(tidybayes)
 
 #set location
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+loc = "obesity"
 
-#
+set.seed(1234)
 # load data
 datNMAe = readRDS(paste0(loc, "/obesity_data/datNMAeotobs.rds"))
 datNMAp = readRDS(paste0(loc, "/obesity_data/datNMAprimary.rds"))

@@ -20,9 +20,7 @@ library(dplyr)
 options(mc.cores = parallel::detectCores())
 
 #set location
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
-set_cmdstan_path("~/cmdstan/")
+loc = "obesity"
 
 #save output?
 export = F
@@ -378,7 +376,7 @@ out = summary(emax.NMA.ran)
 
 out
 
-Map.trt(out, pars = c("emaxT", "eT50"), dname, d )
+Map.trt(emax.NMA.ran, pars = c("emaxT", "eT50"), dname, d )
 
 if(export) saveRDS(emax.NMA.ran, paste0(loc, "/obesity_results/Time/emax.NMA.ran.rds") )
 

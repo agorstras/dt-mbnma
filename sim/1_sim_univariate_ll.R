@@ -17,13 +17,13 @@ library(Matrix)
 library(haven)
 library(tidybayes)
 library(future.apply)
+library(cmdstanr)
 plan(multisession)
 
 set.seed(1234)
 
 # set location
-scer = F
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+loc = "sim"
 export = T # save estimation datasets?
 
 # set seed

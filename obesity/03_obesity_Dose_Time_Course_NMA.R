@@ -15,14 +15,12 @@ library(tidybayes)
 library(ggplot2)
 options(mc.cores = parallel::detectCores())
 
-export = F 
+export = F
 
 #set location
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
-set_cmdstan_path("~/cmdstan/")
+loc = "obesity"
 
-#utility functions
+set.seed(1234)
 
 # Setup covariance matrix for random study effects
 mat.fun = function(i){

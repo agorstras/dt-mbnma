@@ -17,12 +17,12 @@ library(Matrix)
 library(haven)
 library(tidybayes)
 library(future.apply)
+library(multinma)
 
 plan(multisession)
 
 # set location
-scer = F
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+loc = "sim"
 
 # create directories for storing /results
 #

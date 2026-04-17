@@ -3,14 +3,14 @@
 # - Table 5 main manuscript
 #
 rm(list = ls()) # clear memory
-options(mc.cores = parallel::detectCores()) # setup for parallel 
+options(mc.cores = parallel::detectCores()) # setup for parallel
 
 library(gridExtra)
 library(ggplot2)
-#
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
-#
+
+loc = "obesity"
+
+set.seed(1234)
 # load time course data
 dat = readRDS(paste0(loc, "/obesity_data/datTime.rds"))
 

@@ -22,8 +22,7 @@ library(future.apply)
 plan(multisession)
 
 # set location
-scer = F
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+loc = "sim"
 
 # set seed for reproducibility
 set.seed(1234)

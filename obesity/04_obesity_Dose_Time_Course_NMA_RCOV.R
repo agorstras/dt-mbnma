@@ -15,15 +15,13 @@ library(ggplot2)
 library(rstan)
 options(mc.cores = parallel::detectCores())
 
-export = F 
+export = F
 
 #set location
-scer = T 
-loc  = ifelse(scer, "~/hdrive/mbnma", "H:/mmbna")
+loc = "obesity"
 stan.loc = paste0(loc, "/obesity_stan/")
 
-
-# utility functions
+set.seed(1234)
 # Setup covariance matrix for study effects
 mat.fun = function(i){
   tmp = matrix(NA, i, i)
