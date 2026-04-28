@@ -7,6 +7,7 @@ options(mc.cores = parallel::detectCores()) # setup for parallel
 
 library(gridExtra)
 library(ggplot2)
+library(loo)
 
 loc = "obesity"
 

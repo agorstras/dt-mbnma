@@ -9,6 +9,12 @@
 library(gridExtra)
 library(ggplot2)
 library(multinma)
+library(loo)
+library(Matrix)
+library(tidyverse)
+library(tidybayes)
+library(lme4)
+library(brms)
 
 rm(list = ls()) # clear memory
 options(mc.cores = parallel::detectCores()) # setup for parallel
